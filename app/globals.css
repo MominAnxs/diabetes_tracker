@@ -143,3 +143,12 @@ body {
 .mt-16 {
   margin-top: 16px;
 }
+
+@media (max-width: 768px) {
+  .form-row {
+    flex-direction: column;
+  }
+  .identifier{
+    display: none;
+  }
+}

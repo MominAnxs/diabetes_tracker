@@ -209,7 +209,7 @@ export default function DashboardPage() {
       <header className="header">
         <h1>🩸 Diabetes Tracker</h1>
         <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
-          <span>Welcome, {session.user.name || session.user.email}</span>
+          <span className='identifier'>Welcome, {session.user.name || session.user.email}</span>
           <button onClick={handleLogout} className="btn btn-danger">
             Logout
           </button>
@@ -272,6 +272,7 @@ export default function DashboardPage() {
             <button
               type="submit"
               className="btn btn-primary"
+              style={{marginTop: "20px"}}
               disabled={saving || (!formData.preReading && !formData.postReading)}
             >
               {saving ? 'Saving...' : 'Save Reading'}
